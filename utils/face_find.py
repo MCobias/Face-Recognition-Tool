@@ -101,3 +101,6 @@ def get_rotation_matrix(p1, p2):
 def crop_image(image, det):
     left, top, right, bottom = rect_to_tuple(det)
     return image[top:bottom, left:right]
+
+def resize_image(img, size):
+    return imutils.resize(img, width=size)
